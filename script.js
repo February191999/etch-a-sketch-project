@@ -13,6 +13,10 @@ newGridButton.addEventListener("click", () => {
     let toInteger = Number(askNumber);
     const gridsToCreate = (toInteger * toInteger) + 1; 
 
+    if (toInteger > 100) {
+        return alert("That number is too large!");
+    }
+
     do {
         containerDiv.removeChild(containerDiv.firstChild);
     } while (containerDiv.hasChildNodes()); //Removes grids from container 
