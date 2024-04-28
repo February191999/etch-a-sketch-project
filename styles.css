@@ -10,6 +10,9 @@ body, .container {
 
 body {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .container {
