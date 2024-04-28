@@ -1,1 +1,5 @@
 # etch-a-sketch-project
+
+Practice using JavaScript and manipulating the DOM by creating functions to generate grids similar to an etch-a-sketch. Each grid is created by an iteration in a loop and appended to a container div through DOM targeting. Event listeners are used to listen for "mouseover" events in order to change a grid's background color if a user moves the cursor over a grid. The etch-a-sketch project uses event listener to listen for a "click" event as well. The "New Grid" button, when clicked, prompts the visitor for the desired number of grid x grid, but not more than 100. The entered number is multiplied by itself before being used to create a new grid according to the visitor's request. An "if" statement is used to check if the visitor's input is more than 100, if it is, the "click" event does not create a new grid but informs the visitor that the entered number is too high instead.
+
+The etch-a-sketch project also has a random rgb value generator to return a random rgb value which is used when a user hovers over a grid. This allows the visitor to color each grid in a new color instead of the same color.
