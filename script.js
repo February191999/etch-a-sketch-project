@@ -4,7 +4,7 @@ const newGridButton = document.createElement("button");
 const body = document.querySelector("body");
 
 newGridButton.textContent = "New Grid";
-newGridButton.setAttribute("style", "width: 5%; height: 5%; font-weight: bold;");
+newGridButton.setAttribute("style", "width: 10%; height: 10%; font-weight: bold; max-width: 100px;");
 
 body.insertBefore(newGridButton, containerDiv);
 
