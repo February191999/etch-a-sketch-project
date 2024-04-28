@@ -1,6 +1,13 @@
 const containerDiv = document.querySelector(".container");
-
 const containerHeight = containerDiv.offsetHeight; //Total container height
+const newGridButton = document.createElement("button");
+const body = document.querySelector("body");
+
+newGridButton.textContent = "New Grid";
+newGridButton.setAttribute("style", "width: 5%; height: 5%; font-weight: bold;")
+
+body.insertBefore(newGridButton, containerDiv);
+
 
 for (let i = 1; i < 257; i++) { // Create 16 x 16 grid
     const gridDiv = document.createElement("div"); //Individual grids
