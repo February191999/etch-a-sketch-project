@@ -35,7 +35,7 @@ newGridButton.addEventListener("click", () => {
             console.log(containerDiv);
         
             gridDiv.addEventListener("mouseover", () => { //Changes grid color if mouse hovers above
-                gridDiv.style.backgroundColor = "blue";
+                gridDiv.style.backgroundColor = randomRGBValue();
             });
         
             containerDiv.appendChild(gridDiv);
@@ -56,8 +56,20 @@ for (let i = 1; i < 257; i++) { // Create 16 x 16 grid
     // console.log(containerDiv);
 
     gridDiv.addEventListener("mouseover", () => { //Changes grid color if mouse hovers above
-        gridDiv.style.backgroundColor = "blue";
+        gridDiv.style.backgroundColor = randomRGBValue();
     });
 
     containerDiv.appendChild(gridDiv);
+}
+
+
+
+function randomRGBValue() {
+    let randomIndividualValue = Math.floor(Math.random() * 255);
+
+    console.log(randomIndividualValue);
+
+    const randomColor = `rgb(${randomIndividualValue}, ${randomIndividualValue}, ${randomIndividualValue})`;
+    console.log(randomColor);
+    return randomColor; 
 }
