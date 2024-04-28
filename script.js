@@ -11,15 +11,16 @@ body.insertBefore(newGridButton, containerDiv);
 newGridButton.addEventListener("click", () => {
     let askNumber = prompt("Enter a number for your new grid (not more than a 100!): ");
     let toInteger = Number(askNumber);
+    const gridsToCreate = (toInteger * toInteger) + 1;
 
-    while (containerDiv.hasChildNodes()) {
+    do {
         containerDiv.removeChild(containerDiv.firstChild);
-    };
+    } while (containerDiv.hasChildNodes());
     
 
     function createNewGrid() {
 
-        for (let i = 1; i < toInteger; i++) { // Create grid according to prompt
+        for (let i = 1; i < gridsToCreate; i++) { // Create grid according to prompt
             const gridDiv = document.createElement("div"); //Individual grids
         
             const dividedHeightParts = (containerHeight / toInteger); //height divided into 16 parts
@@ -30,7 +31,7 @@ newGridButton.addEventListener("click", () => {
             console.log(containerDiv);
         
             if (i % 16 == 0) {
-                gridDiv.setAttribute("style", `border: 5px solid black; width: ${gridDivHeightPercentage}%; height: ${gridDivHeightPercentage}%; background-color: red; margin: 0; padding: 0;`);
+                gridDiv.setAttribute("style", `border: 5px solid black; width: ${gridDivHeightPercentage}%; height: ${gridDivHeightPercentage}%; background-color: green; margin: 0; padding: 0;`);
             }
         
             gridDiv.addEventListener("mouseover", () => { //Changes grid color if mouse hovers above
@@ -41,7 +42,7 @@ newGridButton.addEventListener("click", () => {
         }
     }
 
-    createNewGrid;
+    createNewGrid();
 })
 
 for (let i = 1; i < 257; i++) { // Create 16 x 16 grid
@@ -52,7 +53,7 @@ for (let i = 1; i < 257; i++) { // Create 16 x 16 grid
 
     gridDiv.setAttribute("style", `border: 5px solid black; width: ${gridDivHeightPercentage}%; height: ${gridDivHeightPercentage}%; margin: 0; padding: 0;`);
 
-    console.log(containerDiv);
+    // console.log(containerDiv);
 
     if (i % 16 == 0) {
         gridDiv.setAttribute("style", `border: 5px solid black; width: ${gridDivHeightPercentage}%; height: ${gridDivHeightPercentage}%; background-color: red; margin: 0; padding: 0;`);
