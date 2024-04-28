@@ -20,4 +20,6 @@ body {
     width: 35vw;
     height: 35vw;
     flex-wrap: wrap;
+    min-width: 650px;
+    min-height: 650px;
 }
