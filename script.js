@@ -1,7 +1,24 @@
 const containerDiv = document.querySelector(".container");
 
-for (let i = 0; i < 256; i++) {
+const containerHeight = containerDiv.offsetHeight;
+
+for (let i = 1; i < 257; i++) { // Create 16 x 16 grid
     const gridDiv = document.createElement("div");
-    gridDiv.style.cssText = "border: 5px solid black; width: 50px; height: 50px;";
+
+    // const dividedWidthParts = (containerWidth / 16);
+    // const gridDivWidthPercentage = (((dividedWidthParts / containerWidth) * 100) / (16 / 9));
+
+    const dividedHeightParts = (containerHeight / 16);
+    const gridDivHeightPercentage = ((dividedHeightParts / containerHeight) * 100);
+
+    console.log(gridDivHeightPercentage);
+    gridDiv.setAttribute("style", `border: 5px solid black; width: ${gridDivHeightPercentage}%; height: ${gridDivHeightPercentage}%; margin: 0; padding: 0;`);
+
+    console.log(containerDiv);
+
+    if (i % 16 == 0) {
+        gridDiv.setAttribute("style", `border: 5px solid black; width: ${gridDivHeightPercentage}%; height: ${gridDivHeightPercentage}%; background-color: red; margin: 0; padding: 0;`);
+    }
+
     containerDiv.appendChild(gridDiv);
 }
