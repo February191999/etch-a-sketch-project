@@ -65,11 +65,10 @@ for (let i = 1; i < 257; i++) { // Create 16 x 16 grid
 
 
 function randomRGBValue() {
-    let randomIndividualValue = Math.floor(Math.random() * 255);
+    let randomR = Math.floor(Math.random() * 255); //Random red value
+    let randomG = Math.floor(Math.random() * 255); //Random green value
+    let randomB = Math.floor(Math.random() * 255); //Random blue value
 
-    console.log(randomIndividualValue);
-
-    const randomColor = `rgb(${randomIndividualValue}, ${randomIndividualValue}, ${randomIndividualValue})`;
-    console.log(randomColor);
+    const randomColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
     return randomColor; 
 }
